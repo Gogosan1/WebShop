@@ -75,30 +75,14 @@
                         <ColumnDefinition Width="363*"/>
                         <ColumnDefinition Width="431*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="Counterparties" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,198,0,74" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name="innTextBox" HorizontalAlignment="Left" Margin="212,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
-                    <Label Content="инн" HorizontalAlignment="Left" Margin="103,33,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="currentAccountNumberTextBox" HorizontalAlignment="Left" Margin="213,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
-                    <Label Content="номер расчетного счета" HorizontalAlignment="Left" Margin="45,64,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="BanksNameTextBox" HorizontalAlignment="Left" Margin="213,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
-                    <Label Content="название банка" HorizontalAlignment="Left" Margin="70,101,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="213,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
-                    <Label Content="название организации контрагента" HorizontalAlignment="Left" Margin="6,128,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="AddCounterpartyButton" Content="добавить контрагента" HorizontalAlignment="Left" Margin="204,163,0,0" VerticalAlignment="Top" Click="AddCounterpartyButton_Click"/>
-                    <Button x:Name="DeleteCounterpartyButton" Content="удалить контрагента" HorizontalAlignment="Left" Margin="251,348,0,0" VerticalAlignment="Top" Click="DeleteCounterpartyButton_Click" Grid.Column="1"/>
+                    <DataGrid x:Name="Counterparties" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,19,0,253" Grid.ColumnSpan="2"/>
                     <TextBlock x:Name="errorAddCounterparty" HorizontalAlignment="Left" Margin="68,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem HorizontalAlignment="Center" Height="20" Header="ассортимент" VerticalAlignment="Top" Width="113" Margin="0,-1,0,0">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="GoodsDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,149,0,51"/>
-                    <Label Content="название товара" HorizontalAlignment="Left" Margin="45,9,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="AddProductButton" Content="добавить товар" HorizontalAlignment="Left" Margin="177,81,0,0" VerticalAlignment="Top" />
-                    <TextBox HorizontalAlignment="Left" Margin="161,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="единицы измерения" HorizontalAlignment="Left" Margin="26,41,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="uintComboBox" HorizontalAlignment="Left" Margin="265,42,0,0" VerticalAlignment="Top" Width="120"/>
+                    <DataGrid x:Name="GoodsDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,29,0,170"/>
                     <Label Content="" HorizontalAlignment="Left" Margin="72,62,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="quantityAccordingToUnitTextBox" HorizontalAlignment="Left" Margin="165,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
                 </Grid>
             </TabItem>
         </TabControl>

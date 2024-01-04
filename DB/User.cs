@@ -15,7 +15,7 @@ public partial class User
 
     public long? PersonId { get; set; }
 
-    public long OrganizationId { get; set; }
+    public long? OrganizationId { get; set; }
 
     public virtual Organization? Organization { get; set; }
 

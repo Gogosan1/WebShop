@@ -38,9 +38,9 @@ namespace WebShop.V
                 }
                 if (user.RoleId == 3)
                 {
-                    StockWorkerWindow stokWorker = new StockWorkerWindow();
+                   // StockWorkerWindow stokWorker = new StockWorkerWindow();
                     this.Close();
-                    stokWorker.Show();
+                   // stokWorker.Show();
                 }
             }
             catch (Exception ex)

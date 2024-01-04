@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Query.Internal;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using WebShop.DB;
@@ -11,7 +10,7 @@ namespace WebShop.Model
         public ObservableCollection<Shop> shops = new ObservableCollection<Shop>();
         public ObservableCollection<Stok> stoks = new ObservableCollection<Stok>();
         public ObservableCollection<Counterparty> counterparties = new ObservableCollection<Counterparty>();
-        public ObservableCollection<Product> products = new ObservableCollection<Product>();
+        public ObservableCollection<Good> products = new ObservableCollection<Good>();
         
         public GodMode()
         {
@@ -23,11 +22,11 @@ namespace WebShop.Model
             shops.Clear();
             stoks.Clear();
             counterparties.Clear();
-        //    products.Clear();
+            products.Clear();
             GetShops();
             GetStoks();
             GetCounterparties();
-          //  GetProducts();
+            GetProducts();
         }
 
         private void GetShops()
@@ -84,7 +83,7 @@ namespace WebShop.Model
                 var units = context.Units.ToList();
                 foreach(var good in goods)
                 {
-                    products.Add(new Product((int)good.Id, good.Name,good.QuantityAccordingToUnit, good.IdUnitNavigation.Name));
+                    products.Add(good);
                 }
             }
         }
@@ -94,7 +93,7 @@ namespace WebShop.Model
 
         }
 
-        public void AddCounterparty(long inn, string banksName, long currentAccountNumber, string organizationName)
+        /*public void AddCounterparty(long inn, string banksName, long currentAccountNumber, string organizationName)
         {
             using (var webShopContext = new WebShopContext())
             {
@@ -111,8 +110,8 @@ namespace WebShop.Model
             }
             Update();
         }
-
-        public void DeleteCounterparty(long Id)
+*/
+/*        public void DeleteCounterparty(long Id)
         {
             using (var webShopContext = new WebShopContext())
             {
@@ -128,7 +127,7 @@ namespace WebShop.Model
                 }
             }
             Update();
-        }
+        }*/
 
 
         public void AddStructuralSubdivision(int typeId, string name, string address, long orgId)

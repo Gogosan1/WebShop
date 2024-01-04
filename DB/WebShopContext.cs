@@ -59,7 +59,7 @@ public partial class WebShopContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlite("Data Source=DB/WebShop.db");
+        => optionsBuilder.UseSqlite("Data Source=DB\\\\\\\\WebShop.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -70,9 +70,9 @@ public partial class WebShopContext : DbContext
             entity.HasIndex(e => e.Id, "IX_assortment_id").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.IdStructuralSubdivision).HasColumnName("id sturctural subdivision");
+            entity.Property(e => e.IdSturcturalSubdivision).HasColumnName("id sturctural subdivision");
 
-            entity.HasOne(d => d.IdSturcturalSubdivisionNavigation).WithMany(p => p.Assortments).HasForeignKey(d => d.IdStructuralSubdivision);
+            entity.HasOne(d => d.IdSturcturalSubdivisionNavigation).WithMany(p => p.Assortments).HasForeignKey(d => d.IdSturcturalSubdivision);
         });
 
         modelBuilder.Entity<Check>(entity =>
@@ -118,6 +118,7 @@ public partial class WebShopContext : DbContext
             entity.HasIndex(e => e.Id, "IX_counterparty_id").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Address).HasColumnName("address");
             entity.Property(e => e.BanksName).HasColumnName("banks name");
             entity.Property(e => e.CurrentAccountNumber).HasColumnName("current account number");
             entity.Property(e => e.Inn).HasColumnName("inn");

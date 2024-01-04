@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,15 +10,14 @@ namespace WebShop.Model
     { 
         public int Id { get; set; }
         public string Name { get; set; }
-        public double QuantityAccordingToUnit { get; set; }
         public string Unit { get; set; }
 
-        public Product(int id, string name, double quantity, string unit) 
+        public Product(int id, string name, string unit) 
         {
             Id = id;
             Name = name;
-            QuantityAccordingToUnit = quantity;
             Unit = unit;
         }
     }
 }
+*/

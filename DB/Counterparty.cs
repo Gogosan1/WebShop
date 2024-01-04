@@ -7,13 +7,15 @@ public partial class Counterparty
 {
     public long Id { get; set; }
 
-    public long Inn { get; set; }
+    public long? Inn { get; set; }
 
-    public string BanksName { get; set; } = null!;
+    public string? Address { get; set; }
 
-    public long CurrentAccountNumber { get; set; }
+    public string? BanksName { get; set; }
 
-    public string Name { get; set; } = null!;
+    public long? CurrentAccountNumber { get; set; }
+
+    public string? Name { get; set; }
 
     public virtual ICollection<Price> Prices { get; set; } = new List<Price>();
 

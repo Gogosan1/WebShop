@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Windows;
-using System.Windows.Controls;
 using WebShop.DB;
 using WebShop.Model;
-
+ 
 namespace WebShop.V
 {
 
@@ -20,7 +17,7 @@ namespace WebShop.V
             shops.ItemsSource = _mode.shops;
             stoks.ItemsSource = _mode.stoks;
             Counterparties.ItemsSource = _mode.counterparties;
-           // GoodsDataGrid.ItemsSource = _mode.products;
+            GoodsDataGrid.ItemsSource = _mode.products;
             account = user;
         }
 
@@ -36,7 +33,7 @@ namespace WebShop.V
         {
             int typeId = 2;
             try {
-                _mode.AddStructuralSubdivision(typeId, shopName.Text, shopAddress.Text, account.OrganizationId);
+                _mode.AddStructuralSubdivision(typeId, shopName.Text, shopAddress.Text, (long)account.OrganizationId);
             }
             catch(Exception ex)
             {
@@ -50,7 +47,7 @@ namespace WebShop.V
             int typeId = 1;
             try
             {
-                _mode.AddStructuralSubdivision(typeId, shopName.Text, shopAddress.Text, account.OrganizationId);
+                _mode.AddStructuralSubdivision(typeId, shopName.Text, shopAddress.Text, (long)account.OrganizationId);
             }
             catch (Exception ex)
             {
@@ -65,24 +62,9 @@ namespace WebShop.V
             _mode.DeleteSturcturalSubdivision(stock.Name);
         }
 
-        private void AddCounterpartyButton_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                _mode.AddCounterparty(Convert.ToInt64(innTextBox.Text),BanksNameTextBox.Text,Convert.ToInt64(currentAccountNumberTextBox.Text),NameTextBox.Text);
-            }
-            catch (Exception ex)
-            {
-                errorAddCounterparty.Text = ex.Message;
-            }
-        }
+     
 
-        private void DeleteCounterpartyButton_Click(object sender, RoutedEventArgs e)
-        {
-            Counterparty stock = (Counterparty)Counterparties.SelectedItems[0];
-            _mode.DeleteCounterparty(stock.Id);
-        }
-
+        
      /*   private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
             try
