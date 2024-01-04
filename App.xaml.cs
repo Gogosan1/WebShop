@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows;
-using WebShop.M;
-using WebShop.Pr;
 using WebShop.V;
 
 namespace WebShop
@@ -15,9 +13,7 @@ namespace WebShop
         [STAThread]
         static void Main()
         {
-            IView view = new Window1();
-            IUserDBLogic UserDBLogic = new UserDBLogic();
-            var presenter = new UserLogInPresenter(view,UserDBLogic);
+            Window view = new LoginWindow();
 
             App app = new App();
             app.Run((Window)view);

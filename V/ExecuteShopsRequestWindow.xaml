@@ -1,0 +1,18 @@
+﻿<Window x:Class="WebShop.V.ExecuteShopsRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebShop.V"
+        mc:Ignorable="d"
+        Title="ExecuteShopsRequestWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,100,0,196"/>
+        <Label Content="Выбор контрагента для доставки" HorizontalAlignment="Left" Margin="25,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ориентировочные дата и время доставки" HorizontalAlignment="Left" Margin="8,266,0,0" VerticalAlignment="Top"/>
+        <Label Content="дата" HorizontalAlignment="Left" Margin="276,260,0,0" VerticalAlignment="Top"/>
+        <Label Content="время" HorizontalAlignment="Left" Margin="273,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.011,0.46"/>
+        <Button Content="Исполнить доставку" HorizontalAlignment="Left" Margin="552,316,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="WebShop.V.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebShop.V"
+        mc:Ignorable="d"
+        Title="Сеть магазинов. Вход" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid Margin="2,20,0,0">
+        <Button x:Name="FogotPasswordButton" Content="Забыли пароль?" HorizontalAlignment="Left" Margin="294,279,0,0" VerticalAlignment="Top" Command="" TabIndex="4"/>
+        <Button x:Name="SignInButton" Content="Войти" HorizontalAlignment="Left" Margin="416,279,0,0" VerticalAlignment="Top" Command="" Click="SignInButton_Click" TabIndex="3"/>
+        <TextBlock x:Name="SignInWindowErrorsTextBlock" HorizontalAlignment="Left" Margin="318,251,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="314,160,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SignInPasswordTextBox" Margin="0,204,273,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="2" HorizontalAlignment="Right" Width="120"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="312,203,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SignInLoginTextBox" HorizontalAlignment="Right" Margin="0,166,273,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="1"/>
+
+    </Grid>
+</Window>
